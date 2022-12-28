@@ -71,15 +71,6 @@ public class AnswersServiceImp implements AnswersServiceInterface {
                     ResultSet rs = (ResultSet) stmt.getObject(8);
                     rs.next();
                 }
-
-
-//                while (rs.next()) {
-//                    Long ID = rs.getLong("APPLICANT_ID");
-//                    Long QUESTION_ID = rs.getLong("QUESTION_ID");
-//                    String APPLICANT_NAME = rs.getString("ANSWERS");
-//                Long QUALIFICATION = rs.getLong("CREATED_BY");
-
-//                     answer = new AnswersModel(null,  QUESTION_ID, APPLICANT_NAME,  QUALIFICATION,  CONTACT_NO,  EXPERIENCE,  INTERVIEWED_BY, CREATED_BY,null, null, null, null);
             } else if (con.isClosed()) {
                 throw new SQLException("Connection Closed");
             } else {
@@ -87,8 +78,6 @@ public class AnswersServiceImp implements AnswersServiceInterface {
             }
         return new GenericResponse("00","Success",Answers);
     }
-
-
 
     @Override
     public void removeUsers() {
