@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>SpringHow html to pdf</title>
+<!--    <link rel="stylesheet" href="main.css">-->
+    <link href="main.css" rel="stylesheet"/>
+</head>
+<body>
+
+<div style="width: 100%; line-height: 20px;">
+    <span>
+
+    </span>
+    <span style="float: right; height: 100px;">
+
+    </span>
+</div>
+
+
+<table>
+
+    <tbody>
+
+    <th>
+
+        <td>
+        <img src="axa-logo.png" alt="aksa" style="width: 160px">
+
+    </td>
+    <div style="font-size: 20px; color: #324891; text-align: end; float: right;">AKSA-SDS</div>
+
+
+    </td>
+    </th>
+    </tbody>
+
+</table>
+
+
+
+
+     <div>
+         <div  style="width: 20px;text-align: center;background-color: #2ab673;float: left;height: 40px; margin-top: 4px;">
+&nbsp;
+         </div>
+         <div style=" margin-left:30px; width: 100%;text-align: center;background-color: #324891; margin-top: 10px;">
+             <h3 style="margin-top: 10px; color:white; padding: 4px 0px;   ">
+                 HR Interview Questionnaire
+             </h3>
+         </div>
+     </div>
+<!--form-->
+<div>
+
+
+
+    <table>
+        <form>
+            <tr>
+                <td style="width: 10%;">
+                    <label for="name">
+                        <div style=" line-height: 60px;  width: 180px; font-weight: bold;float: left;margin-right:5px">Interview for the Post:</div>
+                    </label>
+                </td>
+                <td style="width: 50%;">
+
+                    <input   th:value="${data[0].INTERVIEW_POST}" style="width: 100%;padding-left: 5px;  height: 50px; margin-top: 5px;" />
+
+                </td>
+                <td style="width: 10%; padding-left: 10px;">
+                    <label for="name">
+                        <div style="font-weight: bold; line-height: 60px;  float: left;margin-right:5px; align-self: center;    align-items: center; place-content: center;">Date:</div>
+                    </label>
+                </td>
+                <td style="width: 40%;">
+
+                    <input  th:value="${data[0].CREATED_DATE}" style="width: 100%; padding-left: 5px; height: 50px; margin-top: 5px;" />
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td style="width: 10%;">
+                    <label for="name">
+                        <div style="font-weight: bold;">Name of Applicant:</div>
+                    </label>
+                </td>
+                <td style="width: 50%;">
+
+                    <input  th:value="${data[0].APPLICANT_NAME}" style="width: 100%; height: 50px; margin-top: 5px;padding-left: 5px;" />
+
+                </td>
+                <td style="width: 10%; padding-left: 10px;">
+                    <label for="name">
+                        <div style="font-weight: bold;">Qualification:</div>
+                    </label>
+                </td>
+                <td style="width: 40%;">
+
+                    <input  th:value="${data[0].QUALIFICATION}" style="padding-left: 5px;width: 100%; height: 50px; margin-top: 5px;" />
+                </td>
+            </tr>
+
+
+            <tr>
+                <td style="width: 10%;">
+                    <label for="name">
+                        <div style="font-weight: bold;">CNIC:</div>
+                    </label>
+                </td>
+                <td style="width: 50%;">
+
+                    <input  th:value="${data[0].CNIC}" style="padding-left: 5px;width: 100%; height: 50px; margin-top: 5px;" />
+
+                </td>
+                <td style="width: 10%; padding-left: 10px;">
+                    <label for="name">
+                        <div style="font-weight: bold;">Contact
+                            Information:</div>                    </label>
+                </td>
+                <td style="width: 40%;">
+
+                    <input  th:value="${data[0].CONTACT_NO}" style="padding-left: 5px;width: 100%; height: 50px; margin-top: 5px;" />
+                </td>
+            </tr>
+
+            <tr>
+                <td style="width: 10%;">
+                    <label for="name">
+                        <div style="font-weight: bold;">Experience:</div>
+                    </label>
+                </td>
+                <td style="width: 50%;">
+
+                    <input  th:value="${data[0].EXPERIENCE}" style="padding-left: 5px;width: 100%; height: 50px; margin-top: 5px;" />
+
+                </td>
+
+            </tr>
+
+
+
+        </form>
+    </table>
+
+
+
+
+</div>
+<!--     Q/A-->
+        <div  th:each="item,iter : ${data}">
+
+            <div th:text="${(iter.index+1)+'. ' + item.QUESTIONS}" style="font-weight: bold; margin-top: 8px;" ></div>
+<!--            <div th:text="${item.ANSWERS}" style="font-weight: bold; margin-top: 8px;" ></div>-->
+
+
+            <div th:text="${item.ANSWERS}" style="
+
+            width: 100%;
+
+            padding: 5px;
+
+            border:solid 2px #000; border-radius: 5px; padding-left: 5px;  min-height: 40px; height: auto; margin-top: 5px; margin-bottom: 3px;
+
+
+" > </div>
+<!--    <h1 th:value="${item.ANSWER}">  </h1>-->
+<!--    <input  th:value="${item.ANSWER}" />-->
+
+</div>
+
+
+
+
+
+<div style="margin-left:2px; padding:8px; margin-top: 4px; width: 100%;  background-color: #324891;color: white;">
+    <span style="width: 50%; text-align: left;" >www.aksa-sds.com</span>
+    <span style="width: 50%; text-align: center; margin-left: 150px;">Quality Management System</span>
+</div>
+
+
+
+</body>
+</html>

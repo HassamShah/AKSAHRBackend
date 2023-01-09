@@ -136,8 +136,8 @@ public class UserServiceImp implements userServiceInterface {
 //            user.IS_DELETED = rs.getString("IS_DELETED");
             }
             if (!(passwordEncoder.matches(user.PASSWORD, PASSWORD))){
-                throw new SQLException("LPC");
-//                return new GenericResponse("99","Invalid Email or Password",null);
+
+                return new GenericResponse("99","Invalid Email or Password",null);
             }
 
         } else if (con.isClosed()) {

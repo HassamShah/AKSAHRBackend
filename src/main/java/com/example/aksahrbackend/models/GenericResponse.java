@@ -5,6 +5,10 @@ public class GenericResponse<T> {
     private String message="Success";
     private T data;
 
+    public GenericResponse() {
+
+    }
+
     public String getStatus() {
         return status;
     }
