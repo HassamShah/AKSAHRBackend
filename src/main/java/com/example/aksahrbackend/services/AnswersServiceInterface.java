@@ -11,7 +11,6 @@ import java.util.List;
 public interface AnswersServiceInterface {
 
     public GenericResponse<List<AnswersModel>> getAnswers(AnswersModel Answers) throws SQLException;
-    public String getReport(AnswersModel Answers,Model model) throws SQLException;
     public GenericResponse<List<AnswersModel>> saveOrUpdateAnswers(List<AnswersModel> Answers) throws SQLException;
 
     public void removeUsers();

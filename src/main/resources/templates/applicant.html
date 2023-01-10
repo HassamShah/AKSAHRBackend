@@ -73,8 +73,7 @@
                     </label>
                 </td>
                 <td style="width: 40%;">
-
-                    <input  th:value="${data[0].CREATED_DATE}" style="width: 100%; padding-left: 5px; height: 50px; margin-top: 5px;" />
+                    <input  th:value="${#dates.format(data[0].CREATED_DATER, 'dd-MMM-yyyy')}" style="width: 100%; padding-left: 5px; height: 50px; margin-top: 5px;" />
                 </td>
             </tr>
 

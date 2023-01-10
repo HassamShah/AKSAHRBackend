@@ -3,6 +3,8 @@ package com.example.aksahrbackend.models;
 
 import org.springframework.lang.Nullable;
 
+import java.util.Date;
+
 public class AnswersModel {
 
     @Nullable
@@ -175,7 +177,7 @@ public class AnswersModel {
     @Nullable public  Long QUESTIONS_ID;
     @Nullable public  Long APPLICANT_ID;
 
-    public AnswersModel(@Nullable String CNIC, @Nullable String APPLICANT_NAME, @Nullable String QUALIFICATION, @Nullable String INTERVIEW_POST, @Nullable String INTERVIEWED_BY, @Nullable String CONTACT_NO, @Nullable String EXPERIENCE, @Nullable String QUESTIONS, @Nullable String ANSWERS, @Nullable Long APPLICANT_ANSWERS_ID, @Nullable Long QUESTIONS_ID, @Nullable Long APPLICANT_ID, @Nullable Long CREATED_BY, @Nullable String CREATED_DATE, @Nullable String UPDATED_DATE, @Nullable String UPDATED_BY, @Nullable String IS_DELETED) {
+    public AnswersModel(@Nullable String CNIC, @Nullable String APPLICANT_NAME, @Nullable String QUALIFICATION, @Nullable String INTERVIEW_POST, @Nullable String INTERVIEWED_BY, @Nullable String CONTACT_NO, @Nullable String EXPERIENCE, @Nullable String QUESTIONS, @Nullable String ANSWERS, @Nullable Long APPLICANT_ANSWERS_ID, @Nullable Long QUESTIONS_ID, @Nullable Long APPLICANT_ID, @Nullable Long CREATED_BY, @Nullable String CREATED_DATE, @Nullable String UPDATED_DATE, @Nullable String UPDATED_BY, @Nullable String IS_DELETED,@Nullable Date CREATED_DATER) {
         this.CNIC = CNIC;
         this.APPLICANT_NAME = APPLICANT_NAME;
         this.QUALIFICATION = QUALIFICATION;
@@ -190,6 +192,7 @@ public class AnswersModel {
         this.APPLICANT_ID = APPLICANT_ID;
         this.CREATED_BY = CREATED_BY;
         this.CREATED_DATE = CREATED_DATE;
+        this.CREATED_DATER = CREATED_DATER;
         this.UPDATED_DATE = UPDATED_DATE;
         this.UPDATED_BY = UPDATED_BY;
         this.IS_DELETED = IS_DELETED;
@@ -197,6 +200,8 @@ public class AnswersModel {
 
     @Nullable public  Long CREATED_BY;
     @Nullable public  String CREATED_DATE;
+
+    @Nullable public Date CREATED_DATER;
     @Nullable public  String UPDATED_DATE;
 
 
